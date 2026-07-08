@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Laboratorio IA · MBA-UMH — 20 simuladores de obligado uso</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#101828;--ink2:#475467;--ink3:#98A2B3;--paper:#F2F4F7;--card:#fff;--line:#E4E7EC}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',system-ui,sans-serif;background:var(--paper);color:var(--ink)}
+h1,h2,h3{font-family:'Space Grotesk',sans-serif}
+.hero{background:#101828;color:#fff;padding:56px 22px 46px;text-align:left}
+.hero .wrap{max-width:1040px;margin:0 auto}
+.hero .eyebrow{font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;color:#94A3B8;font-weight:600}
+.hero h1{font-size:clamp(1.7rem,4.5vw,2.7rem);line-height:1.15;margin:12px 0 14px;max-width:760px}
+.hero p{color:#CBD5E1;max-width:680px;line-height:1.6;font-size:.95rem}
+.hero .chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:20px}
+.hero .chip{border:1px solid #334155;border-radius:999px;padding:5px 13px;font-size:.75rem;color:#CBD5E1}
+main{max-width:1040px;margin:0 auto;padding:36px 18px 70px}
+.mod{margin-bottom:34px}
+.mod-head{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.mod-head .dot{width:12px;height:12px;border-radius:4px;background:var(--mc)}
+.mod-head h2{font-size:1.02rem}
+.mod-head .count{font-size:.72rem;color:var(--ink3);font-weight:600;margin-left:auto}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px}
+.app{display:flex;gap:14px;background:var(--card);border:1px solid var(--line);border-left:4px solid var(--mc);border-radius:14px;padding:18px;text-decoration:none;color:var(--ink);transition:transform .12s, box-shadow .12s}
+.app:hover{transform:translateY(-2px);box-shadow:0 10px 26px rgba(16,24,40,.10)}
+.app .icon{width:44px;height:44px;border-radius:11px;background:var(--mc);color:#fff;display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0}
+.app b{display:block;font-family:'Space Grotesk';font-size:1rem}
+.app span{display:block;font-size:.76rem;color:var(--mc);font-weight:600;margin:2px 0 7px}
+.app p{font-size:.79rem;color:var(--ink2);line-height:1.5}
+.notice{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px;margin-bottom:34px;font-size:.85rem;color:var(--ink2);line-height:1.6}
+footer{text-align:center;font-size:.72rem;color:var(--ink3);padding:22px}
+</style>
+</head>
+<body>
+<div class="hero"><div class="wrap">
+<div class="eyebrow">Máster Universitario en Administración y Dirección de Empresas · UMH</div>
+<h1>Laboratorio de simulación con IA: 20 apps de obligado uso del MBA-UMH</h1>
+<p>Cada app es un simulador de práctica deliberada vinculado a una asignatura del plan de estudios: genera un caso, sitúa al estudiante en un rol profesional real, le enfrenta a interlocutores de IA y evalúa su desempeño con rúbrica exportable. Todo funciona en el navegador, sin servidor: solo necesitas tu clave de API de OpenAI (botón 🔑 dentro de cada app).</p>
+<div class="chips"><span class="chip">7 asignaturas del módulo común</span><span class="chip">2 optativas</span><span class="chip">Prácticas externas</span><span class="chip">TFM</span><span class="chip">gpt-4o-mini</span><span class="chip">Sin backend · GitHub Pages</span></div>
+</div></div>
+<main>
+<div class="notice"><b>Cómo se usa en la evaluación continua:</b> el estudiante realiza las sesiones indicadas por cada asignatura, exporta el informe (.md o PDF) con la transcripción y la rúbrica, y lo entrega como evidencia. El historial de sesiones queda guardado en el propio navegador (IndexedDB). La clave de API se almacena solo en localStorage del estudiante y las llamadas van directas a la API de OpenAI.</div>
+<section class="mod"><div class="mod-head" style="--mc:#1E40AF"><span class="dot"></span><h2>Administración y Dirección Estratégica</h2><span class="count">2 apps</span></div><div class="grid"><a class="app" style="--mc:#1E40AF" href="estrategia-dafo.html">
+<div class="icon">♟</div>
+<div><b>EstrategIA</b><span>Analista estratégico bajo presión</span><p>Recibe el dossier de una empresa real e inventada y construye su diagnóstico estratégico (DAFO, PESTEL, 5 Fuerzas de Porter). Un socio consultor senio…</p></div>
+</a><a class="app" style="--mc:#1E40AF" href="comite-directivo.html">
+<div class="icon">🏛</div>
+<div><b>ComitéDirectivo·AI</b><span>Defiende tu plan ante el consejo</span><p>Presenta un plan estratégico ante un comité de dirección simulado: CEO escéptico, CFO obsesionado con la caja y un consejero independiente que pregunt…</p></div>
+</a></div></section>
+<section class="mod"><div class="mod-head" style="--mc:#0F766E"><span class="dot"></span><h2>Dirección de Operaciones, Innovación y Calidad</h2><span class="count">2 apps</span></div><div class="grid"><a class="app" style="--mc:#0F766E" href="operaciones-lean.html">
+<div class="icon">⚙</div>
+<div><b>LeanOps·AI</b><span>Encuentra el cuello de botella</span><p>Una planta o un servicio con problemas de plazos, calidad o costes. Entrevista al responsable de operaciones de IA, diagnostica el flujo con lógica Le…</p></div>
+</a><a class="app" style="--mc:#0F766E" href="auditoria-calidad.html">
+<div class="icon">🧾</div>
+<div><b>AuditorIA</b><span>Sobrevive a la auditoría de calidad</span><p>Actúas como responsable de calidad durante una auditoría ISO 9001 / EFQM simulada. El auditor de IA revisa evidencias, detecta no conformidades y tú d…</p></div>
+</a></div></section>
+<section class="mod"><div class="mod-head" style="--mc:#C2410C"><span class="dot"></span><h2>Creación de Empresas y Emprendimiento</h2><span class="count">3 apps</span></div><div class="grid"><a class="app" style="--mc:#C2410C" href="lean-canvas.html">
+<div class="icon">🗺</div>
+<div><b>Canvas·AI</b><span>Tu modelo de negocio, bloque a bloque</span><p>Construye el Business Model Canvas de tu idea guiado por un mentor de IA que aplica crítica socrática: cada bloque debe superar sus preguntas antes de…</p></div>
+</a><a class="app" style="--mc:#C2410C" href="pitch-inversor.html">
+<div class="icon">🎤</div>
+<div><b>PitchLab·AI</b><span>Tres minutos ante el inversor</span><p>Entrena tu elevator pitch ante un inversor de IA con perfil configurable. Rondas de pitch, preguntas duras sobre mercado, tracción y valoración, y eva…</p></div>
+</a><a class="app" style="--mc:#C2410C" href="descubrimiento-clientes.html">
+<div class="icon">🔍</div>
+<div><b>ValidaIdea·AI</b><span>Entrevista clientes antes de construir</span><p>Practica customer discovery al estilo Mom Test: entrevista a clientes potenciales simulados que, como los reales, mienten por cortesía. Aprende a preg…</p></div>
+</a></div></section>
+<section class="mod"><div class="mod-head" style="--mc:#6D28D9"><span class="dot"></span><h2>Gestión Laboral y Dirección del Comportamiento</h2><span class="count">3 apps</span></div><div class="grid"><a class="app" style="--mc:#6D28D9" href="negociacion.html">
+<div class="icon">🤝</div>
+<div><b>Negocia·AI</b><span>Negociación con intereses ocultos</span><p>Negocia un convenio, un contrato con proveedor o una salida pactada contra una contraparte de IA con mandato e intereses ocultos. Aplica el método Har…</p></div>
+</a><a class="app" style="--mc:#6D28D9" href="conversaciones-dificiles.html">
+<div class="icon">💬</div>
+<div><b>FeedbackPro·AI</b><span>La conversación que nadie quiere tener</span><p>Practica conversaciones difíciles de dirección de personas: bajo desempeño, cambios de rol, denegación de un ascenso o comunicación de un despido. El …</p></div>
+</a><a class="app" style="--mc:#6D28D9" href="entrevista-seleccion.html">
+<div class="icon">🪪</div>
+<div><b>Selecta·AI</b><span>Tú eres quien entrevista</span><p>Conduce una entrevista de selección por competencias a un candidato de IA con currículum brillante y puntos débiles ocultos. Tu misión: descubrir la r…</p></div>
+</a></div></section>
+<section class="mod"><div class="mod-head" style="--mc:#BE185D"><span class="dot"></span><h2>Decisiones de Marketing</h2><span class="count">2 apps</span></div><div class="grid"><a class="app" style="--mc:#BE185D" href="plan-marketing.html">
+<div class="icon">🎯</div>
+<div><b>MarketingPlan·AI</b><span>Del diagnóstico al plan de marketing</span><p>Construye un plan de marketing completo (segmentación, posicionamiento, marketing mix, presupuesto y KPIs) para un caso real, con un director de marke…</p></div>
+</a><a class="app" style="--mc:#BE185D" href="buyer-persona.html">
+<div class="icon">🗣</div>
+<div><b>FocusGroup·AI</b><span>Un focus group sintético a tu disposición</span><p>Modera un focus group con 3 buyer personas sintéticos generados para tu producto. Explora percepciones, precios y mensajes; luego sintetiza insights a…</p></div>
+</a></div></section>
+<section class="mod"><div class="mod-head" style="--mc:#15803D"><span class="dot"></span><h2>Dirección Económica-Financiera</h2><span class="count">2 apps</span></div><div class="grid"><a class="app" style="--mc:#15803D" href="analisis-financiero.html">
+<div class="icon">📊</div>
+<div><b>RatioLab·AI</b><span>Los estados financieros hablan</span><p>Analiza el balance y la cuenta de resultados de una empresa simulada: liquidez, solvencia, rentabilidad y fondo de maniobra. Un director financiero de…</p></div>
+</a><a class="app" style="--mc:#15803D" href="decision-inversion.html">
+<div class="icon">📈</div>
+<div><b>InvertIA</b><span>¿Aprobamos este proyecto?</span><p>Evalúa una decisión de inversión: construye los flujos de caja, calcula VAN, TIR y payback, somete el proyecto a escenarios y defiende tu recomendació…</p></div>
+</a></div></section>
+<section class="mod"><div class="mod-head" style="--mc:#334155"><span class="dot"></span><h2>Derecho Empresarial</h2><span class="count">1 app</span></div><div class="grid"><a class="app" style="--mc:#334155" href="asesoria-legal.html">
+<div class="icon">§</div>
+<div><b>LexEmpresa·AI</b><span>El cliente llega con un problema legal</span><p>Actúas como asesor jurídico-empresarial: un cliente de IA te plantea un caso (forma societaria, contratos, socios, RGPD, laboral). Haz las preguntas c…</p></div>
+</a></div></section>
+<section class="mod"><div class="mod-head" style="--mc:#0E7490"><span class="dot"></span><h2>Prácticas Externas</h2><span class="count">1 app</span></div><div class="grid"><a class="app" style="--mc:#0E7490" href="diario-practicas.html">
+<div class="icon">📓</div>
+<div><b>DiarioPrácticas·AI</b><span>De la anécdota al aprendizaje</span><p>Convierte cada semana de tus prácticas en aprendizaje estructurado: cuenta lo que has vivido y un tutor de IA te guía con el ciclo reflexivo de Gibbs,…</p></div>
+</a></div></section>
+<section class="mod"><div class="mod-head" style="--mc:#B45309"><span class="dot"></span><h2>Optatividad</h2><span class="count">2 apps</span></div><div class="grid"><a class="app" style="--mc:#B45309" href="simulacion-empresarial.html">
+<div class="icon">🎲</div>
+<div><b>SimulaEmpresa·AI</b><span>Dirige la empresa trimestre a trimestre</span><p>Toma de decisiones por rondas al estilo business game: cada trimestre decides precio, producción, marketing, personal e inversión; el mercado simulado…</p></div>
+</a><a class="app" style="--mc:#B45309" href="metodologia-investigacion.html">
+<div class="icon">🔬</div>
+<div><b>MétodoLab·AI</b><span>De la curiosidad a la pregunta de investigación</span><p>Diseña una investigación en ciencias sociales paso a paso: pregunta, marco teórico, hipótesis, metodología y plan de análisis, con un metodólogo de IA…</p></div>
+</a></div></section>
+<section class="mod"><div class="mod-head" style="--mc:#4338CA"><span class="dot"></span><h2>Trabajo Fin de Máster</h2><span class="count">2 apps</span></div><div class="grid"><a class="app" style="--mc:#4338CA" href="tfm-coach.html">
+<div class="icon">🎓</div>
+<div><b>TFM·Coach</b><span>Tu TFM, con estructura y sin pánico</span><p>Acompañamiento integral del Trabajo Fin de Máster: define el tema, valida el índice, revisa la coherencia entre objetivos, metodología y conclusiones,…</p></div>
+</a><a class="app" style="--mc:#4338CA" href="defensa-tribunal.html">
+<div class="icon">🏅</div>
+<div><b>Tribunal·AI</b><span>Ensaya la defensa antes del día D</span><p>Simulacro completo de defensa del TFM: expones tu trabajo y un tribunal de tres profesores de IA (metodólogo, especialista y presidente) te somete al …</p></div>
+</a></div></section>
+
+</main>
+<footer>Laboratorio IA · MBA-UMH · Universidad Miguel Hernández de Elche · Uso exclusivamente docente. Las simulaciones (incluida LexEmpresa·AI) no constituyen asesoramiento profesional real.</footer>
+</body>
+</html>
