@@ -1,0 +1,15 @@
+cff-version: 1.2.0
+message: "Si usas este software, cítalo con estos metadatos."
+title: "Máster en Administración y Dirección de Empresas (MBA) UMH"
+type: software
+authors:
+  - family-names: "Borrás Rocher"
+    given-names: "Fernando"
+    affiliation: "Universidad Miguel Hernández de Elche"
+    orcid: "https://orcid.org/0000-0002-5519-4573"
+doi: "10.5281/zenodo.21423208"
+version: "1.0.0"
+date-released: "2026-07-18"
+url: "https://fborrasumh.github.io/mba_ai/"
+repository-code: "https://github.com/fborrasumh/mba_ai"
+license: MIT
