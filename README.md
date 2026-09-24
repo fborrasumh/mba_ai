@@ -5,7 +5,7 @@ Suite de 20 simuladores docentes con IA para el **Máster Universitario en Admin
 ## Arquitectura (kernel compartido)
 
 - Single-file HTML + vanilla JavaScript, sin frameworks ni backend.
-- Modelo `gpt-4o-mini` vía API de OpenAI; clave en `localStorage` (`ia_openai_key`), compartida entre todas las apps del mismo dominio.
+- Modelo `gpt-6-luna` (temperatura 1) vía API de OpenAI; clave en `localStorage` (`ia_openai_key`), compartida entre todas las apps del mismo dominio.
 - Flujo en 3 fases: **Caso generado por IA → Simulación conversacional en rol → Evaluación con rúbrica (JSON estructurado)**.
 - Historial de sesiones en **IndexedDB** (una base por app: `mba_umh_<id>`).
 - Exportación de informe: **Markdown** descargable e **impresión/PDF** del navegador.
